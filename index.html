@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SUDOKU</title>
+	
+	<meta name="author" content="Bradley Taylor">
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" media="all" href="css/style.css">
+</head>
+<body>
+	<h1>Sudoku</h1>
+	<h2>How quick can you complete it?</h2>
+	<div class="lightbox" id="lightbox">
+		<div class="lightbox_content" id="lightbox_content">
+			
+		</div>
+	</div>
+	<div id="sudoku_board"></div>
+	<noscript>Sorry, You need Javascript enabled to use this application</noscript>
+	<script src="js/sudoku.js"></script>
+	<script src="js/controls.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script>
+	
+	//start the relevant objects
+	lightbox.init();
+	sudoku.init();
+	controls.init();
+		
+	</script>
+</body>
+</html>

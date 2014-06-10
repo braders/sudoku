@@ -1,0 +1,140 @@
+
+		/*css reset*/
+		html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+		
+		/*import fonts */
+		@font-face {
+			font-family: 'icons';
+			src:url('fonts/icons.eot?-63h5xy');
+			src:url('fonts/icons.eot?#iefix-63h5xy') format('embedded-opentype'),
+			url('fonts/icons.woff?-63h5xy') format('woff'),
+			url('fonts/icons.ttf?-63h5xy') format('truetype'),
+			url('fonts/icons.svg?-63h5xy#icons') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		
+		/*and the rest... */
+		
+		body{
+			background: rgb(255, 255, 139);
+		}
+		
+		h1{
+			font-size: 3em;
+			font-weight: bold;
+			margin: 1em 1em -0.5em 0.5em;
+			-webkit-transform: rotate(-25deg);
+			-moz-transform: rotate(-25deg);
+			-ms-transform: rotate(-25deg);
+			-o-transform: rotate(-25deg);
+			transform: rotate(-25deg);
+			display: inline-block;
+			color: rgb(252, 102, 102);
+		}
+		h2{
+			display: inline-block;
+			font-size: 1.3em;
+			font-style: italic;
+		}
+		
+		#sudoku_board{
+			margin: 3em;
+		}
+		
+		#sudoku_board > table{
+			font-size:1.4em;
+			margin: 0em 0.5em;
+			float: left;
+		}
+		
+		#sudoku_board > div{
+			float:left
+		}
+		
+		#sudoku_board > div > a{
+			display: block;
+			color: black;
+			cursor: pointer; /*needed as theri is no actual href */
+		}
+		#sudoku_board > div > a:hover{
+			color: gray;
+		}
+		#sudoku_board > div > a:before{
+			content: "";
+			font-family: 'icons';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			font-size: 1.3em;
+
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		
+		#sudoku_board > div > a#restart:before{
+			content: "\e603";
+		}
+		#sudoku_board > div > a#new_game:before{
+			content: "\e602";
+		}
+		#sudoku_board > div > a#answer:before{
+			content: "\e601";
+		}
+		#timer{
+			font-size: 1.1em;
+			margin: 0.6em;
+		}
+		
+		td{
+			min-width:10px;
+			min-height:10px;
+			border:black solid;
+		}
+		input{
+			width:30px;
+			padding: 0.1em;
+		}
+		
+		/*overlay stuff... */
+		.lightbox{
+			display:none;
+		}
+		.lightbox:before{
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgb(31, 12, 12);
+			text-align: center;
+			opacity: 0.6;
+		}
+		.lightbox_content {
+			left: 10%;
+			background: white;
+			position: fixed;
+			right: 10%;
+			top: 10%;
+			bottom: 10%;
+			text-align: center;
+		}
+		.lightbox_content h2{
+			font-weight: bold;
+			font-size: 2em;
+		}
+		
+		.button{
+			cursor: pointer;
+			background: red;
+			padding: 1em;
+			display: inline-block;
+			text-decoration: none;
+			margin: 1em;
+			font-family: sans-serif;
+		}
