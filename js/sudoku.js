@@ -172,9 +172,9 @@
 							s.regions[i][j].value = value;
 							s.regions[i][j].visible = visible;
 							if (visible){
-								s.regions[i][j].reference.getElementsByTagName('input')[0].style.removeProperty('background');
+								s.regions[i][j].reference.getElementsByTagName('input')[0].style.background = "rgb(202, 202, 202)";
 								s.regions[i][j].reference.getElementsByTagName('input')[0].value = value;
-								s.regions[i][j].reference.getElementsByTagName('input')[0].disabled = true;
+								s.regions[i][j].reference.getElementsByTagName('input')[0].setAttribute("readonly","readonly");
 							}
 							else{
 								s.regions[i][j].reference.getElementsByTagName('input')[0].value = '';
@@ -258,6 +258,7 @@
 									s.regions[index][cell_no] = {};
 									s.regions[index][cell_no].reference = cell ;
 									s.regions[index][cell_no].reference.innerHTML = "<input></input>";
+									s.regions[index][cell_no].reference.firstChild.setAttribute("pattern","[0-9]*");
 									s.regions[index][cell_no].reference.id = index + "" + cell_no;
 								
 									
